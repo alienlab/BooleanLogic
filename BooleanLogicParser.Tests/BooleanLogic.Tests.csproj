@@ -7,8 +7,8 @@
     <ProjectGuid>{C2B2BD49-7201-4A59-8D29-D88EEB1FB3F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BooleanLogicParser.Tests</RootNamespace>
-    <AssemblyName>BooleanLogicParser.Tests</AssemblyName>
+    <RootNamespace>Alienlab.BooleanLogic.Tests</RootNamespace>
+    <AssemblyName>Alienlab.BooleanLogic.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,9 +50,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BooleanLogicParser\BooleanLogicParser.csproj">
+    <ProjectReference Include="..\BooleanLogicParser\BooleanLogic.csproj">
       <Project>{671BC84B-7C04-49CE-ABFA-86A1972BE701}</Project>
-      <Name>BooleanLogicParser</Name>
+      <Name>BooleanLogic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

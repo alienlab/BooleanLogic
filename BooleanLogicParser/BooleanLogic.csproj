@@ -7,8 +7,8 @@
     <ProjectGuid>{671BC84B-7C04-49CE-ABFA-86A1972BE701}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BooleanLogicParser</RootNamespace>
-    <AssemblyName>BooleanLogicParser</AssemblyName>
+    <RootNamespace>Alienlab.BooleanLogic</RootNamespace>
+    <AssemblyName>Alienlab.BooleanLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

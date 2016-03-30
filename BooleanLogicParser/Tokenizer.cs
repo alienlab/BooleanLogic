@@ -1,4 +1,4 @@
-﻿namespace BooleanLogicParser
+﻿namespace Alienlab.BooleanLogic
 {
   using System;
   using System.Collections.Generic;

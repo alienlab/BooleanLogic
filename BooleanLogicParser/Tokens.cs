@@ -1,4 +1,4 @@
-﻿namespace BooleanLogicParser
+﻿namespace Alienlab.BooleanLogic
 {
   public class OperandToken : Token
   {

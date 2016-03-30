@@ -1,4 +1,4 @@
-﻿namespace BooleanLogicParser.Tests
+﻿namespace Alienlab.BooleanLogic.Tests
 {
   using System;
   using System.Linq;
