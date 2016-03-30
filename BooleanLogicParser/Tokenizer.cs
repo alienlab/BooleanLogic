@@ -3,6 +3,7 @@
   using System;
   using System.Collections.Generic;
   using System.IO;
+  using System.Linq;
   using System.Text;
 
   public class Tokenizer
@@ -16,6 +17,13 @@
       _text = text;
       _reader = new StringReader(text);
       _trueAliases = new string[0];
+    }
+
+    public Tokenizer(string text, params string[] trueAliases)
+    {
+      _text = text;
+      _reader = new StringReader(text);
+      _trueAliases = trueAliases;
     }
 
     public IEnumerable<Token> Tokenize()
@@ -89,6 +97,12 @@
 
       var potentialKeyword = text.ToString().ToLower();
 
+      var aliases = _trueAliases.Length > 0;
+      if (_trueAliases.Any(x => x.Equals(potentialKeyword, StringComparison.OrdinalIgnoreCase)))
+      {
+        return new TrueToken();
+      }
+
       switch (potentialKeyword)
       {
         case "true":
@@ -104,7 +118,14 @@
           return new OrToken();
 
         default:
-          throw new Exception("Expected keyword (True, False, And, Or) but found " + potentialKeyword);
+          if (aliases)
+          {
+            return new FalseToken();
+          }
+          else
+          {
+            throw new Exception("Expected keyword (True, False, And, Or) but found " + potentialKeyword);
+          }
       }
     }
   }

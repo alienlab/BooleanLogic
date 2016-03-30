@@ -72,5 +72,16 @@
       var parser = new Parser(tokens);
       return parser.Parse();
     }
+
+    [TestCase("one&two&(!three|four)", new string[] { "one", "two" }, ExpectedResult = true)]
+    [TestCase("one&two&(!three|four)", new string[] { "one", "two", "three" }, ExpectedResult = false)]
+    [TestCase("one&two&(!three|four)", new string[] { "one", "two", "three", "four" }, ExpectedResult = true)]
+    [TestCase("one&two&(!three|four)", new string[] { "one", "two", "five" }, ExpectedResult = true)]
+    public bool CanParseTokenAndAliases(string expression, string[] trueAliases)
+    {
+      var tokens = new Tokenizer(expression, trueAliases).Tokenize();
+      var parser = new Parser(tokens);
+      return parser.Parse();
+    }
   }
 }
