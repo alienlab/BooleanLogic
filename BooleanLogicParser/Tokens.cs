@@ -1,50 +1,46 @@
 ﻿namespace BooleanLogicParser
 {
-    public class OperandToken : Token
-    {
-        
-    }
-    public class OrToken : OperandToken
-    {
-    }
+  public class OperandToken : Token
+  {
+  }
 
-    public class AndToken : OperandToken
-    {
-    }
+  public class OrToken : OperandToken
+  {
+  }
 
-    public class BooleanValueToken : Token
-    {
-        
-    }
+  public class AndToken : OperandToken
+  {
+  }
 
-    public class FalseToken : BooleanValueToken
-    {
-    }
+  public class BooleanValueToken : Token
+  {
+  }
 
-    public class TrueToken : BooleanValueToken
-    {
-    }
+  public class FalseToken : BooleanValueToken
+  {
+  }
 
-    public class ParenthesisToken : Token
-    {
+  public class TrueToken : BooleanValueToken
+  {
+  }
 
-    }
+  public class ParenthesisToken : Token
+  {
+  }
 
-    public class ClosedParenthesisToken : ParenthesisToken
-    {
-    }
+  public class ClosedParenthesisToken : ParenthesisToken
+  {
+  }
 
+  public class OpenParenthesisToken : ParenthesisToken
+  {
+  }
 
-    public class OpenParenthesisToken : ParenthesisToken
-    {
-    }
+  public class NegationToken : Token
+  {
+  }
 
-    public class NegationToken : Token
-    {
-    }
-
-    public abstract class Token
-    {
-
-    }
+  public abstract class Token
+  {
+  }
 }
